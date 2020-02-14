@@ -67,11 +67,11 @@ catch(err) {
         if (results) {
           newWord = results[0]["word"];
           //console.log(newWord);
-          newStory.splice(0,0,newWord);
+          //newStory.splice(0,0,newWord);
           //newStory[i].push(newWord);
+          newStory[i][j] = newWord;
         }
       });
-      //newStory[i][j] = newWord;
     }
   }
   console.log("done!");
