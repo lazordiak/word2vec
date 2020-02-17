@@ -21,6 +21,7 @@ function setup() {
 }
 
 function mediumReplacer() {
+  let x = 2;
   /*for (i=0;i<mediumStories[0].length;i++) {
   wordVectors.nearest(mediumStories[0][i], function(err, results) {
     if (results[0]["word"] == null) {
@@ -57,8 +58,11 @@ catch(err) {
   //console.log(mediumStories[0]);
   //go through each story
   //go through each list in each story
-  for (i=0;i<mediumStories.length;i++) {
-    for (j=0;j<mediumStories[i].length;j++){
+  for (let i=0;i<mediumStories.length;i++) {
+    newStory.push[[]];
+    for (let j=0;j<mediumStories[i].length;j++) {
+      let saveI = i;
+      let saveJ = j;
       //console.log(i,j);
       let word = mediumStories[i][j];
       //console.log(word);
@@ -66,10 +70,11 @@ catch(err) {
       wordVectors.nearest(word.toLowerCase(), function(err, results) {
         if (results) {
           newWord = results[0]["word"];
-          //console.log(newWord);
+          console.log(newWord);
           //newStory.splice(0,0,newWord);
-          //newStory[i].push(newWord);
-          newStory[i][j] = newWord;
+          console.log(saveI);
+          newStory[saveI].push(newWord);
+          // newStory[i][j] = newWord;
         }
       });
     }
